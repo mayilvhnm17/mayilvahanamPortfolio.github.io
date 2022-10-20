@@ -42,7 +42,6 @@ https://icomoon.io/app/
 Respond JS
 https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
 
-animate.css
 http://daneden.me/animate
 
 jQuery Waypoint
