@@ -82,7 +82,7 @@ h6 {
 }
 
 .containerskills {
-	position: absolute;
+	position: relative;
 	transform: translate(50%);
 	width: 50%;
 	padding: 0px 30px 50px;
@@ -92,6 +92,28 @@ h6 {
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
+}
+@media screen and (max-width: 768px) {
+	.containerskills {
+		transform: translate(20%);
+		width: 70%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.containerskills {
+		transform: translate(0%);
+		width: 90%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.containerskills * {
+		font-size: medium;
+	}
+}
+@media screen and (max-width: 480px) {
+	.containerskills * {
+		font-size: x-small;
+	}
 }
 .padding_vertical {
 	padding-top: 20px;
@@ -122,8 +144,30 @@ h6 {
 	border-radius: 10px;
 	background-color: #000000;
 }
+@media screen and (max-width: 768px) {
+	.bar div {
+		height: 4.5px;
+		border-radius: 5px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.bar div {
+		height: 3px;
+		border-radius: 4px;
+	}
+}
 .skills:not(:last-child) {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+	.skills:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.skills:not(:last-child) {
+		margin-bottom: 8px;
+	}
 }
 #unity-bar {
 	animation: unity-fill 2s forwards;
@@ -162,7 +206,7 @@ h6 {
 }
 @keyframes aipro-fill {
 	100% {
-		width: 75%;
+		width: 20%;
 	}
 }
 #rn-bar {
@@ -178,7 +222,7 @@ h6 {
 }
 @keyframes android-fill {
 	100% {
-		width: 75%;
+		width: 50%;
 	}
 }
 
@@ -729,15 +773,15 @@ h6 {
 		-webkit-transition: 0.5s;
 		-o-transition: 0.5s;
 		transition: 0.5s;
-		max-width: 100%;
-		height: 194px;
+		max-width: 50%;
+		height: 50%;
 	}
 	.fh5co-project .fh5co-imgs .img-holder-3 img {
 		-webkit-transition: 0.5s;
 		-o-transition: 0.5s;
 		transition: 0.5s;
-		max-width: 100%;
-		height: 194px;
+		max-width: 50%;
+		height: 50%;
 	}
 }
 .fh5co-project.fh5co-reverse .img-holder-1 {
@@ -769,8 +813,8 @@ h6 {
 		-webkit-transition: 0.5s;
 		-o-transition: 0.5s;
 		transition: 0.5s;
-		max-width: 100%;
-		height: 194px;
+		max-width: 50%;
+		height: 50%;
 	}
 }
 .fh5co-project .fh5co-text {
