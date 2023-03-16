@@ -81,6 +81,107 @@ h6 {
 	overflow: hidden;
 }
 
+.containerskills {
+	position: absolute;
+	transform: translate(50%);
+	width: 50%;
+	padding: 0px 30px 50px;
+	/* background-color: rgb(255, 255, 255, 0.5);
+	border-radius: 10px;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); */
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.padding_vertical {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.containerskills * {
+	font-family: “Poppins”, sans-serif;
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 500;
+}
+.details {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.bar {
+	position: relative;
+
+	border: 2px solid #000000;
+
+	border-radius: 20px;
+}
+.bar div {
+	position: relative;
+	width: 0;
+	height: 9px;
+	border-radius: 10px;
+	background-color: #000000;
+}
+.skills:not(:last-child) {
+	margin-bottom: 30px;
+}
+#unity-bar {
+	animation: unity-fill 2s forwards;
+}
+@keyframes unity-fill {
+	100% {
+		width: 75%;
+	}
+}
+#unreal-blueprint-bar {
+	animation: unreal-blueprint-fill 2s forwards;
+}
+@keyframes unreal-blueprint-fill {
+	100% {
+		width: 80%;
+	}
+}
+#unreal-bar {
+	animation: unreal-fill 2s forwards;
+}
+@keyframes unreal-fill {
+	100% {
+		width: 20%;
+	}
+}
+#gamepr-bar {
+	animation: gamepr-fill 2s forwards;
+}
+@keyframes gamepr-fill {
+	100% {
+		width: 60%;
+	}
+}
+#aipro-bar {
+	animation: aipro-fill 2s forwards;
+}
+@keyframes aipro-fill {
+	100% {
+		width: 75%;
+	}
+}
+#rn-bar {
+	animation: rn-fill 2s forwards;
+}
+@keyframes rn-fill {
+	100% {
+		width: 70%;
+	}
+}
+#android-bar {
+	animation: android-fill 2s forwards;
+}
+@keyframes android-fill {
+	100% {
+		width: 75%;
+	}
+}
+
 .btn {
 	margin-right: 4px;
 	margin-bottom: 4px;

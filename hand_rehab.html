@@ -160,9 +160,11 @@
 							</div>
 
 							<div class="row animate-box">
+								<div class="col-md-2"></div>
 								<div class="col-md-10">
 									<figure calss="text-center">
 										<img
+											width="100%"
 											src="images/HandRehab/handRehab2.png"
 											class="rounded mx-auto d-block"
 											alt="Hand Rehab"
@@ -180,89 +182,119 @@
 								</div>
 								<div class="col-md-9">
 									<p class="fh5co-lead">
-										The project production time was 4 months and it was done as a
-										part of our course. We were a team of 5 and I was the Lead
+										The project production time was 4 months and it was done as
+										a part of our course. We were a team of 5 and I was the Lead
 										Programmer. I actively took part in game design as well.
 									</p>
 									<p>
-										There were alot of things I took care, but will highlight the top things,<br/>
-										<h3 class="fh5co-section-heading">Programming</h3>
-										<ul>
-											<li>
-												Created a GameManager Script to handle all the variables 
-												that are necessary for the game. This script acts as a 
-												connector script which gets accessed by all other scripts. 
-												All scripts should search variables in GameManager for executing functionality.<br/>
-												<div class="img-holder-1 animate-box">
-													<img src="images/handRehab/work1.png" alt="gameManager" />
-												</div>
-											</li>
-											<li>
-												All the levels and code is handled only in GameManager and no extra scripts were created for levels. (Dynamic coding)
-											</li>
-											<div class="img-holder-1 animate-box">
-													<img src="images/handRehab/work7.png" alt="Hand" />
-												</div>
-											<li>
-												Created A single script for both right and left hand and if we want to change the dominant hand 
-												it can be done with just a click of a button.
-												<div class="img-holder-1 animate-box">
-													<img src="images/handRehab/work2.png" alt="Hand" />
-												</div>
-												<div class="img-holder-1 animate-box">
-													<img src="images/handRehab/work3.png" alt="Hand" />
-												</div>
-											</li>
-											<li>
-												Split and reused the code for hand functions for three different scenarios and it is handled by disabling and enabling the script.
-												<div class="img-holder-1 animate-box">
-													<img src="images/handRehab/work4.png" alt="Hand" />
-												</div>
-											</li>
-										</ul>
+										There were alot of things I worked on, but will highlight
+										the top things,<br />
 									</p>
-									<p>
-										<h3 class="fh5co-section-heading">Game Design</h3>
-										<ul>
-											<li>
-												There are 4 trigger boxes that can be found under the Leap Motion Hand GameObject.
-												<ol>
-													<li>
-														<b>Got within grab range(Object In Range)</b> - This is used to 
-														trigger the camera movement closer to the hands since the mushrooms 
-														are within the grab range and the player enters an examination mode 
-														where he can accept or reject the mushroom by putting it in the basket or throwing it away.
-													</li>
-													<li>
-														<b>Out box(Got Out) </b>- When the mushroom is 
-														thrown out after it got within the grab range then 
-														it triggers the Out box when exiting. This trigger moves 
-														the camera back to the original position which is exploration.
-													</li>
-													<li>
-														<b>Hand bounds</b> - This is to indicate that the hands are going out of the leap motions range of detection
-
-													</li>
-													<li>
-														<b>Increased elevation </b>
-														- This is created so that the player can easily grab the mushroom when it is near the player.
-
-													</li>
-												</ol>
-												<div class="img-holder-1 animate-box">
-													<img src="images/handRehab/work5.png" alt="Hand" />
-												</div>
-											</li>
-											<li>
-												Created a separate camera to overlay the Aim Icon to display over the scene, 
-												by Masking all the other objects and showing only the objects with tag UI 3D.
-												
-											</li>
-											<div class="col-md-3 animate-box">
-													<img src="images/handRehab/work6.png" alt="Hand" />
-												</div>
-										</ul>
-									</p>
+								</div>
+							</div>
+							<h3 class="fh5co-section-heading">
+								<span class="fh5co-number">N<sup>o</sup> 2.1</span>Programming
+							</h3>
+							<div class="row animate-box row-bottom-padded-sm">
+								<div class="col-md-1"></div>
+								<div class="col-md-11">
+									<ul>
+										<li>
+											Created a GameManager Script to handle all the variables
+											that are necessary for the game. This script acts as a
+											connector script which gets accessed by all other scripts.
+											All scripts should search variables in GameManager for
+											executing functionality.<br />
+											<div class="img-holder-1 animate-box padding_vertical">
+												<img
+													src="images/handRehab/work1.png"
+													alt="gameManager"
+												/>
+											</div>
+										</li>
+										<li>
+											All the levels and code is handled only in GameManager and
+											no extra scripts were created for levels. (Dynamic coding)
+										</li>
+										<div class="img-holder-1 animate-box padding_vertical">
+											<img src="images/handRehab/work7.png" alt="Hand" />
+										</div>
+										<li>
+											Created A single script for both right and left hand and
+											if we want to change the dominant hand it can be done with
+											just a click of a button.
+											<div class="img-holder-1 animate-box padding_vertical">
+												<img src="images/handRehab/work2.png" alt="Hand" />
+											</div>
+											<div class="img-holder-1 animate-box padding_vertical">
+												<img src="images/handRehab/work3.png" alt="Hand" />
+											</div>
+										</li>
+										<li>
+											Split and reused the code for hand functions for three
+											different scenarios and it is handled by disabling and
+											enabling the script. One for tutorial screen(Before
+											entering), one for has the level code(Mushroom Point and
+											Pickup) and the last is the winning screen(Winning Screen
+											hand Controller). All three are interacted using hand
+											gestures
+											<div class="img-holder-1 animate-box padding_vertical">
+												<img src="images/handRehab/work4.png" alt="Hand" />
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<h3 class="fh5co-section-heading">
+								<span class="fh5co-number">N<sup>o</sup> 2.2</span>Game Design
+							</h3>
+							<div class="row animate-box row-bottom-padded-sm">
+								<div class="col-md-1"></div>
+								<div class="col-md-11">
+									<ul>
+										<li>
+											There are 4 trigger boxes that can be found under the Leap
+											Motion Hand GameObject.
+											<ol>
+												<li>
+													<b>Got within grab range(Object In Range)</b> - This
+													is used to trigger the camera movement closer to the
+													hands since the mushrooms are within the grab range
+													and the player enters an examination mode where he can
+													accept or reject the mushroom by putting it in the
+													basket or throwing it away.
+												</li>
+												<li>
+													<b>Out box(Got Out) </b>- When the mushroom is thrown
+													out after it got within the grab range then it
+													triggers the Out box when exiting. This trigger moves
+													the camera back to the original position which is
+													exploration.
+												</li>
+												<li>
+													<b>Hand bounds</b> - This is to indicate that the
+													hands are going out of the leap motions range of
+													detection
+												</li>
+												<li>
+													<b>Increased elevation </b>
+													- This is created so that the player can easily grab
+													the mushroom when it is near the player.
+												</li>
+											</ol>
+											<div class="img-holder-1 animate-box padding_vertical">
+												<img src="images/handRehab/work5.png" alt="Hand" />
+											</div>
+										</li>
+										<li>
+											Created a separate camera to overlay the Aim Icon to
+											display over the scene, by Masking all the other objects
+											and showing only the objects with tag UI 3D.
+										</li>
+										<div class="col-md-3 animate-box padding_vertical">
+											<img src="images/handRehab/work6.png" alt="Hand" />
+										</div>
+									</ul>
 								</div>
 							</div>
 
@@ -278,16 +310,15 @@
 										<li>Gameplay programmer</li>
 										<li>R&D on LeapMotion Plugin</li>
 										<li>Game Design</li>
-										
 									</ul>
-									
 								</div>
 							</div>
 
 							<div class="row row-bottom-padded-sm animate-box">
 								<div class="col-md-3">
 									<h3 class="fh5co-section-heading">
-										<span class="fh5co-number">N<sup>o</sup> 4</span> Requirements
+										<span class="fh5co-number">N<sup>o</sup> 4</span>
+										Requirements
 									</h3>
 								</div>
 								<div class="col-md-9">
@@ -307,12 +338,14 @@
 								</div>
 								<div class="col-md-9">
 									<blockquote class="fh5co-testimony">
-										<a href="https://github.com/oskarbladh/HandRehabPrototype"><i class="icon-git-square"> https://github.com/oskarbladh/HandRehabPrototype</i></a>
+										<a href="https://github.com/oskarbladh/HandRehabPrototype"
+											><i class="icon-git-square">
+												https://github.com/oskarbladh/HandRehabPrototype</i
+											></a
+										>
 									</blockquote>
 								</div>
 							</div>
-
-							
 
 							<div class="row animate-box row-bottom-padded-sm">
 								<div class="col-md-3">
@@ -326,18 +359,18 @@
 										<ul class="slides">
 											<li>
 												<a href="mars_marine.html" class="transition"
-													><img src="images/MarsMarine/1.png"
-												/></a>Mars Marine
+													><img src="images/MarsMarine/1.png" /></a
+												>Mars Marine
 											</li>
 											<li>
-												<a href="work_1.html" class="transition"
-													><img src="images/ARBasketball/1.png"
-												/></a>ARBasketball
+												<a href="ar_basketball.html" class="transition"
+													><img src="images/ARBasketball/1.png" /></a
+												>ARBasketball
 											</li>
 											<li>
-												<a href="work_1.html" class="transition"
-													><img src="images/Ninja/1.png"
-												/></a>Ninja Game
+												<a href="ninja_game.html" class="transition"
+													><img src="images/Ninja/1.png" /></a
+												>Ninja Game
 											</li>
 										</ul>
 									</div>
@@ -355,18 +388,24 @@
 							<p>
 								<small
 									>&copy; 2023 Hold. All Rights Reserved. <br />
-									Edited by
-									Mayilvahanam.P
+									Edited by Mayilvahanam.P
 								</small>
 							</p>
 							<ul class="fh5co-social">
 								<li>
-									<a href="https://linkedin.com/in/mayilvahanam-palaniappan-703b3b133"><i class="icon-linkedin"></i></a>
-									<a href="https://gitlab.com/Mayil"><i class="icon-git-square"></i></a>
+									<a
+										href="https://linkedin.com/in/mayilvahanam-palaniappan-703b3b133"
+										><i class="icon-linkedin"></i
+									></a>
+									<a href="https://gitlab.com/Mayil"
+										><i class="icon-git-square"></i
+									></a>
 									<a href="https://github.com/mayilvhnm17"
 										><i class="icon-github-square"></i
 									></a>
-									<a href="https://www.instagram.com/21_mayil_nov_ahanam/"><i class="icon-instagram"></i></a>
+									<a href="https://www.instagram.com/21_mayil_nov_ahanam/"
+										><i class="icon-instagram"></i
+									></a>
 								</li>
 							</ul>
 						</div>

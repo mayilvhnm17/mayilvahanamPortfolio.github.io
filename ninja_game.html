@@ -8,10 +8,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Mars Marine</title>
+		<title>Ninja Game</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="About the Hand Rehab game" />
-		<meta name="keywords" content="had, rehab, portfolio" />
+		<meta name="description" content="About Ninja Game" />
+		<meta name="keywords" content="Ninja, 2D infinte scroller, game" />
 
 		<!-- Facebook and Twitter integration -->
 		<meta property="og:title" content="" />
@@ -114,7 +114,7 @@
 				<div class="container">
 					<div class="fh5co-text-wrap animate-box">
 						<div class="fh5co-intro-text">
-							<h1>Mars Marine <span>using</span> Unreal Blueprints</h1>
+							<h1>Ninja Game</h1>
 						</div>
 					</div>
 				</div>
@@ -143,32 +143,40 @@
 								</div>
 								<div class="col-md-9">
 									<p class="fh5co-lead">
-										An endless shooter game where the aliens will be spawned
-										based on the wave number. <br />The whole project is done in
-										Unreal Blueprints using Unreal Engine 4.27.
+										A Unity 2d Android Mobile Mini Game which is an infinite
+										scroller game where object pooling concept is used for
+										infinite platform generation.<br />The ninja can jump, kill
+										an enemy and can collect coins for score and high score will
+										be maintained.
 									</p>
 									<p>
-										Enemies(spiders) spawn at various points and waves increase
-										one by one. Health pickups are available. The spider will
-										follow you only in the zone and if you get out of the zone
-										you will receive a warning and if you stay there you will
-										instantly die. The controls are WASD and mouse for direction
-										and also shooting direction. There is a health bar and also
-										a kill count meter. The sound effects are added at the
-										Notify event of the animation.
+										It has intro, pause, death screen and also sound effects.
+										This is the first game that I have created and I wanted to
+										showcase it. :) <br/><b>How to Play: </b><br/>The character moves
+										automatically and there are 3 buttons.<ol><li>Jump [double jump] -
+										right side</li><li> Dive -left side</li><li> Kunai - right side</li></ol> <br/> You have to
+										jump as many platforms as possible without landing on spikes
+										and killing enemies.
 									</p>
+									<div class="fh5co-text col-md-8 animate-box">
+										<p class="fh5co-lead">
+											Click on the link to Download the apk to install and try
+											it out.
+										</p>
+										<a
+											href="https://drive.google.com/file/d/0B5Ae-9WuIGRUclhBZ1JXRks0SzA/view?usp=share_link&resourcekey=0-UCRAGw8M15eMIJIdmI8tHg"
+											class="btn btn-light btn-outline transition"
+											>Download APK</a
+										>
+									</div>
 								</div>
 							</div>
 
 							<div class="row animate-box">
-								<div class="col-md-2"></div>
-								<div class="col-md-10">
+								<div class="col-lg-2"></div>
+								<div class="col-lg-10">
 									<figure>
-										<img
-											width="100%"
-											src="images/MarsMarine/1.png"
-											alt="Mars-Marine"
-										/>
+										<img style="width: 100%;"src="images/Ninja/1.png" alt="" />
 									</figure>
 								</div>
 							</div>
@@ -182,10 +190,9 @@
 								</div>
 								<div class="col-md-9">
 									<p class="fh5co-lead">
-										The game is an infinte shooter game where the infinte part
-										is that there are n number of waves. The project was done as
-										a part of the course in udemy. I have used only Unreal
-										Blueprints.
+										The game is an infinte side scroller game. You have to jump on platforms, 
+										dodge spikes and also kill enemies on the way. 
+										You should also collect coins to get more score.
 									</p>
 								</div>
 							</div>
@@ -197,74 +204,67 @@
 								<div class="col-md-11">
 									<ul>
 										<li>
-											Created folders for each type of Blueprints<br />
+											Have created seperate scripts for each functions like coin generation, 
+											Platform generator, Object Pooling, Pickups and CoinGenerator.<br/>
+											<b>Cam Controller</b> is for pinning the camera on the ninja so while it moves, it follows the ninja.
 											<div class="img-holder-1 animate-box padding_vertical">
-												<img src="images/MarsMarine/work1.png" alt="Folders" />
+												<img
+													src="images/Ninja/work1.png"
+													alt="Folders"
+												/>
 											</div>
 										</li>
 										<li>
-											<b>AI->BP_AlienSpider</b><br />
-											These are the functions and variables used for the
-											functioning of the spider.
-											<br />The spider will start to attack only if the spider
-											get near a certain range with the player. <br />The damage
-											will be applied to the player through Anim Notify event
-											only when the Spider attacks. <br />The next image is the
-											high level blueprint of the Alien Spider.
+											<b>Object Pooler</b><br />
+											This is generic script that helps in using the already generated objects in the scene which is termed as Object Pooling
 										</li>
 										<div class="img-holder-1 animate-box padding_vertical">
-											<img src="images/MarsMarine/work2.png" alt="AI" />
-											<img
-												width="80%"
-												src="images/MarsMarine/work3.png"
-												alt="AI"
+											<img width="60%"
+												src="images/Ninja/work2.png"
+												alt="BallController"
 											/>
 										</div>
 										<li>
-											<b>Pawns->BP_Marine</b><br />
-											These are the functions and variables used for the Marine
-											Pawn.
-											<br />The blueprint has functions for damaging enemies and
-											also Widget updating functions.<br />
-											The next screenshot gives you a high level of what the
-											Marine Blueprint looks like.
+											<b>Platform Generator</b><br />
+											This is the script that takes the object from the pool and puts the objects in the random spots. 
+											<br/>The objects are 3 types of platforms, enemy, spikes and coins.
+											I also made a blocker/collider to follow the player from a distance in the 
+											back to check for the platforms that got past the ninja 
+											and it deactivates the platform present in the pool.
 										</li>
 										<div class="img-holder-1 animate-box padding_vertical">
-											<img src="images/MarsMarine/work4.png" alt="Marine" />
-											<img
-												width="80%"
-												src="images/MarsMarine/work5.png"
-												alt="Marine"
+											<img width="60%"
+												src="images/Ninja/work3.png"
+												alt="BallController"
 											/>
 										</div>
 										<li>
-											<b>Pickups->BP_HealthPickup</b><br />
-											The following image is the blueprint of the health pickup,
-											it restores the health of the player if the player loses
-											health.<br />
-											This blueprint calls the function in the BP_Marine.
+											<b>Health Manager - </b>Updates the 4 health present for the player. 
+											If the player hits the spike(1 heart) or enemy(2 hearts) hearts are lost.<br/>
+											<b>Pickups - </b>Score is updated and also sound is played when collected.<br/>
+											<b>Spike - </b>Calls the function in the Health Manager.<br/>
+											<b>Throw - </b>The code for throwable is done here with the triggerCollider code and also after a 
+											certain delay the instantiated objects are destroyed.
+											
 										</li>
 										<div class="img-holder-1 animate-box padding_vertical">
 											<img
-												width="80%"
-												src="images/MarsMarine/work6.png"
-												alt="Pickup"
+												src="images/Ninja/work4.png"
+												alt="BallController"
 											/>
 										</div>
 										<li>
-											<b>Widgets->MarineWidget</b><br />
-											The following functions are present in the Widget
-											Blueprint and the UI will be updated according to the
-											functions.
-											<br />The functions in the widget blueprint get the data
-											from the BP_Marine.
+											<b>Player Controller</b><br/>
+											All the player/ninja code functionality is written here. 
+											Character animation is handled here. 
+											Score is also maintained here. 
+											When the player falls down death is also triggered here.<br/>
+											Double Jump, Kunai instantiation and Dive code is written here.
 										</li>
 										<div class="img-holder-1 animate-box padding_vertical">
-											<img src="images/MarsMarine/work7.png" alt="Widget" />
-											<img
-												width="80%"
-												src="images/MarsMarine/work8.png"
-												alt="Widget"
+											<img 
+												src="images/Ninja/work5.png"
+												alt="BallController"
 											/>
 										</div>
 									</ul>
@@ -278,37 +278,26 @@
 								<div class="col-md-11">
 									<ul>
 										<li>
-											An out of bounds volume is created to make the player face
-											the enemies within a specific area. When the player goes
-											out of the volume a warning will be displayed and the
-											player will face imminent death in 5sec.
+											<b>Game Manager</b><br/>Game Manager has all the inital position of the ninja and all the initial parameters of the game. 
+											This is used to reset the game when the player clicks the restart button. It also has all the menu related functions.
 											<div class="img-holder-1 animate-box padding_vertical">
 												<img
-													width="80%"
-													src="images/MarsMarine/work10.png"
+													src="images/Ninja/work8.png"
 													alt="OutOfBoundsVolume"
 												/>
 											</div>
 										</li>
 										<li>
-											<b>GameMode->BP_GameMode</b><br />
-											Wave of difficulty is created and based on the wave the
-											enemies count increases. This is done in the
-											BP_GameMode.<br />
-											The next wave will begin in 2sec after the end of each
-											wave.,<br />
-											These are the functions used in the Blueprints.
+											Have added start screen with highscore which is stored in UserPrefs and is retrieved from it the next time the game is opened.
+											Have also added pause and death screen. Pause screen with resume, quit and restart and death screen without resume option.
 											<div class="img-holder-1 animate-box padding_vertical">
-												<img
-													src="images/MarsMarine/work11.png"
-													alt="GameMode"
+												<img width="50%"
+													src="images/Ninja/work6.png"
+													alt="Pause Screen"
 												/>
-											</div>
-											This is a high level view of the BP_GameMode.
-											<div class="img-holder-1 animate-box padding_vertical">
-												<img
-													src="images/MarsMarine/work12.png"
-													alt="GameMode"
+												<img width="50%"
+													src="images/Ninja/work7.png"
+													alt="Death Screen"
 												/>
 											</div>
 										</li>
@@ -323,8 +312,7 @@
 								</div>
 								<div class="col-md-9">
 									<ul class="fh5co-list-style-1 fh5co-inline">
-										<li>Game programming using Blueprints</li>
-										<li>Gameplay programmer using Blueprints</li>
+										<li>Game programming</li>
 										<li>Game Design</li>
 									</ul>
 								</div>
@@ -340,7 +328,7 @@
 								<div class="col-md-9">
 									<ul class="fh5co-list-style-1 fh5co-inline">
 										<p>Requirments necessary to play the game</p>
-										<li>PC</li>
+										<li>Android Mobile</li>
 									</ul>
 								</div>
 							</div>
@@ -353,9 +341,9 @@
 								</div>
 								<div class="col-md-9">
 									<blockquote class="fh5co-testimony">
-										<a href="https://github.com/mayilvhnm17/Mars-Marine"
+										<a href="https://github.com/mayilvhnm17/Ninja"
 											><i class="icon-git-square">
-												https://github.com/mayilvhnm17/Mars-Marine</i
+												https://github.com/mayilvhnm17/Ninja</i
 											></a
 										>
 									</blockquote>
@@ -378,14 +366,14 @@
 												>Hand Rehab game
 											</li>
 											<li>
+												<a href="mars_marine.html" class="transition"
+													><img src="images/MarsMarine/1.png" /></a
+												>Mars Marine
+											</li>
+											<li>
 												<a href="ar_basketball.html" class="transition"
 													><img src="images/ARBasketball/1.png" /></a
 												>ARBasketball
-											</li>
-											<li>
-												<a href="ninja_game.html" class="transition"
-													><img src="images/Ninja/1.png" /></a
-												>Ninja Game
 											</li>
 										</ul>
 									</div>

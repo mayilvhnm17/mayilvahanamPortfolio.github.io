@@ -8,10 +8,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Mars Marine</title>
+		<title>AR Basketball</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="About the Hand Rehab game" />
-		<meta name="keywords" content="had, rehab, portfolio" />
+		<meta name="description" content="About the AR Basketball game" />
+		<meta name="keywords" content="AR, basketball, game" />
 
 		<!-- Facebook and Twitter integration -->
 		<meta property="og:title" content="" />
@@ -114,7 +114,7 @@
 				<div class="container">
 					<div class="fh5co-text-wrap animate-box">
 						<div class="fh5co-intro-text">
-							<h1>Mars Marine <span>using</span> Unreal Blueprints</h1>
+							<h1>AR Basketball <span>using</span> Vuforia</h1>
 						</div>
 					</div>
 				</div>
@@ -143,20 +143,39 @@
 								</div>
 								<div class="col-md-9">
 									<p class="fh5co-lead">
-										An endless shooter game where the aliens will be spawned
-										based on the wave number. <br />The whole project is done in
-										Unreal Blueprints using Unreal Engine 4.27.
+										A Unity 3d Mobile AR Android application developed using
+										Vuforia AR technology where we use an Image target to
+										display the hoop. The ball can be thrown by swiping on the
+										screen and the score will be shown on the screen. It works
+										on all Android mobile phones.
 									</p>
 									<p>
-										Enemies(spiders) spawn at various points and waves increase
-										one by one. Health pickups are available. The spider will
-										follow you only in the zone and if you get out of the zone
-										you will receive a warning and if you stay there you will
-										instantly die. The controls are WASD and mouse for direction
-										and also shooting direction. There is a health bar and also
-										a kill count meter. The sound effects are added at the
-										Notify event of the animation.
+										It has feedback animation and also sound effects. I did it
+										as an experiment during my internship to check how Vuforia
+										works with Image Marker and when you show your camera on an
+										Image target the basketball hoop appears and you can swipe
+										to throw the ball into the hoop.<br />
+										The following image is the target image and you should point
+										your camera on the image.
 									</p>
+									<div class="img-holder-1 animate-box padding_vertical">
+										<img
+											style="width: 50%"
+											src="images/ARBasketball/work1.jpg"
+											alt="Image Target"
+										/>
+									</div>
+									<div class="fh5co-text col-md-8 animate-box">
+										<p class="fh5co-lead">
+											Click on the link to Download the apk to install and try
+											it out.
+										</p>
+										<a
+											href="https://drive.google.com/file/d/1xfalmIN7CPKcIaPezdyL4WXkeb4uaP77/view?usp=sharing"
+											class="btn btn-light btn-outline transition"
+											>Download APK</a
+										>
+									</div>
 								</div>
 							</div>
 
@@ -164,11 +183,7 @@
 								<div class="col-md-2"></div>
 								<div class="col-md-10">
 									<figure>
-										<img
-											width="100%"
-											src="images/MarsMarine/1.png"
-											alt="Mars-Marine"
-										/>
+										<img width="100%" src="images/ARBasketball/1.png" alt="" />
 									</figure>
 								</div>
 							</div>
@@ -182,10 +197,9 @@
 								</div>
 								<div class="col-md-9">
 									<p class="fh5co-lead">
-										The game is an infinte shooter game where the infinte part
-										is that there are n number of waves. The project was done as
-										a part of the course in udemy. I have used only Unreal
-										Blueprints.
+										The game is an infinte basketball hoop shooting game. It is
+										a casual game which gives you sound and visual feedback when
+										you score a ball.
 									</p>
 								</div>
 							</div>
@@ -197,74 +211,28 @@
 								<div class="col-md-11">
 									<ul>
 										<li>
-											Created folders for each type of Blueprints<br />
+											Added Image target prefab from the Vuforia plugin and
+											updated the image to the stone image. Made the objects
+											that need to appear as the child of the Image target<br />
 											<div class="img-holder-1 animate-box padding_vertical">
-												<img src="images/MarsMarine/work1.png" alt="Folders" />
+												<img
+													src="images/ARBasketball/work2.png"
+													alt="Folders"
+												/>
 											</div>
 										</li>
 										<li>
-											<b>AI->BP_AlienSpider</b><br />
-											These are the functions and variables used for the
-											functioning of the spider.
-											<br />The spider will start to attack only if the spider
-											get near a certain range with the player. <br />The damage
-											will be applied to the player through Anim Notify event
-											only when the Spider attacks. <br />The next image is the
-											high level blueprint of the Alien Spider.
-										</li>
-										<div class="img-holder-1 animate-box padding_vertical">
-											<img src="images/MarsMarine/work2.png" alt="AI" />
-											<img
-												width="80%"
-												src="images/MarsMarine/work3.png"
-												alt="AI"
-											/>
-										</div>
-										<li>
-											<b>Pawns->BP_Marine</b><br />
-											These are the functions and variables used for the Marine
-											Pawn.
-											<br />The blueprint has functions for damaging enemies and
-											also Widget updating functions.<br />
-											The next screenshot gives you a high level of what the
-											Marine Blueprint looks like.
-										</li>
-										<div class="img-holder-1 animate-box padding_vertical">
-											<img src="images/MarsMarine/work4.png" alt="Marine" />
-											<img
-												width="80%"
-												src="images/MarsMarine/work5.png"
-												alt="Marine"
-											/>
-										</div>
-										<li>
-											<b>Pickups->BP_HealthPickup</b><br />
-											The following image is the blueprint of the health pickup,
-											it restores the health of the player if the player loses
-											health.<br />
-											This blueprint calls the function in the BP_Marine.
+											<b>Ball Controller</b><br />
+											All the functions from getting the input and applying
+											force to the ball is done in this script.
+											<br />The score updation is also done in this script using
+											the collider function. Visual Feedback is also done inside
+											the collider function
 										</li>
 										<div class="img-holder-1 animate-box padding_vertical">
 											<img
-												width="80%"
-												src="images/MarsMarine/work6.png"
-												alt="Pickup"
-											/>
-										</div>
-										<li>
-											<b>Widgets->MarineWidget</b><br />
-											The following functions are present in the Widget
-											Blueprint and the UI will be updated according to the
-											functions.
-											<br />The functions in the widget blueprint get the data
-											from the BP_Marine.
-										</li>
-										<div class="img-holder-1 animate-box padding_vertical">
-											<img src="images/MarsMarine/work7.png" alt="Widget" />
-											<img
-												width="80%"
-												src="images/MarsMarine/work8.png"
-												alt="Widget"
+												src="images/ARBasketball/work3.png"
+												alt="BallController"
 											/>
 										</div>
 									</ul>
@@ -278,37 +246,14 @@
 								<div class="col-md-11">
 									<ul>
 										<li>
-											An out of bounds volume is created to make the player face
-											the enemies within a specific area. When the player goes
-											out of the volume a warning will be displayed and the
-											player will face imminent death in 5sec.
+											Game Manager is present to check the exit function and
+											Audio Manager is used to hold all the sound and thus plays
+											the sound of ball hitting the board and ground, and also
+											crowd cheer sound when the ball gets inside the hoop.
 											<div class="img-holder-1 animate-box padding_vertical">
 												<img
-													width="80%"
-													src="images/MarsMarine/work10.png"
+													src="images/ARBasketball/work4.png"
 													alt="OutOfBoundsVolume"
-												/>
-											</div>
-										</li>
-										<li>
-											<b>GameMode->BP_GameMode</b><br />
-											Wave of difficulty is created and based on the wave the
-											enemies count increases. This is done in the
-											BP_GameMode.<br />
-											The next wave will begin in 2sec after the end of each
-											wave.,<br />
-											These are the functions used in the Blueprints.
-											<div class="img-holder-1 animate-box padding_vertical">
-												<img
-													src="images/MarsMarine/work11.png"
-													alt="GameMode"
-												/>
-											</div>
-											This is a high level view of the BP_GameMode.
-											<div class="img-holder-1 animate-box padding_vertical">
-												<img
-													src="images/MarsMarine/work12.png"
-													alt="GameMode"
 												/>
 											</div>
 										</li>
@@ -323,8 +268,8 @@
 								</div>
 								<div class="col-md-9">
 									<ul class="fh5co-list-style-1 fh5co-inline">
-										<li>Game programming using Blueprints</li>
-										<li>Gameplay programmer using Blueprints</li>
+										<li>Game programming</li>
+										<li>R&D on Vuforia</li>
 										<li>Game Design</li>
 									</ul>
 								</div>
@@ -340,7 +285,7 @@
 								<div class="col-md-9">
 									<ul class="fh5co-list-style-1 fh5co-inline">
 										<p>Requirments necessary to play the game</p>
-										<li>PC</li>
+										<li>Android Mobile</li>
 									</ul>
 								</div>
 							</div>
@@ -353,9 +298,9 @@
 								</div>
 								<div class="col-md-9">
 									<blockquote class="fh5co-testimony">
-										<a href="https://github.com/mayilvhnm17/Mars-Marine"
+										<a href="https://gitlab.com/Mayil/AR_BB"
 											><i class="icon-git-square">
-												https://github.com/mayilvhnm17/Mars-Marine</i
+												https://gitlab.com/Mayil/AR_BB</i
 											></a
 										>
 									</blockquote>
@@ -378,9 +323,9 @@
 												>Hand Rehab game
 											</li>
 											<li>
-												<a href="ar_basketball.html" class="transition"
-													><img src="images/ARBasketball/1.png" /></a
-												>ARBasketball
+												<a href="mars_marine.html" class="transition"
+													><img src="images/MarsMarine/1.png" /></a
+												>Mars Marine
 											</li>
 											<li>
 												<a href="ninja_game.html" class="transition"
