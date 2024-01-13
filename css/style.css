@@ -516,11 +516,11 @@ h6 {
 	}
 }
 #fh5co-header .fh5co-intro-text {
-	-webkit-transform: skewY(-7deg);
-	-moz-transform: skewY(-7deg);
-	-ms-transform: skewY(-7deg);
-	-o-transform: skewY(-7deg);
-	transform: skewY(-7deg);
+	-webkit-transform: skewY(-5deg);
+	-moz-transform: skewY(-5deg);
+	-ms-transform: skewY(-5deg);
+	-o-transform: skewY(-5deg);
+	transform: skewY(-5deg);
 	text-align: center;
 }
 #fh5co-header h1 {
@@ -705,11 +705,13 @@ h6 {
 	}
 }
 .fh5co-project .fh5co-imgs {
+	
 	height: calc(100% - 50%);
 	position: relative;
 }
 @media screen and (max-width: 768px) {
 	.fh5co-project .fh5co-imgs {
+		
 		margin-bottom: 30px;
 	}
 }
@@ -773,6 +775,25 @@ h6 {
 .fh5co-project .fh5co-imgs .img-holder-1 {
 	left: 0;
 	bottom: 0;
+}
+.img-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.img-container {
+    text-align: center; /* Center the content within each container */
+}
+@media (max-width: 768px) {
+    .img-holder {
+        flex-direction: column; /* Change to a column layout for smaller screens */
+        align-items: center; /* Center items along the column */
+    }
+
+    .img-container {
+        margin-bottom: 20px; /* Add spacing between containers in the column layout */
+    }
 }
 @media screen and (max-width: 768px) {
 	.fh5co-project .fh5co-imgs .img-holder-1 {
