@@ -24,9 +24,9 @@ body {
 	font-size: 18px;
 	line-height: 34px;
 	background: #eeeeee;
-	font-weight: 300;
+	font-weight: 500;
 	opacity: 0;
-	color: #222;
+	color: #000;
 }
 
 a {
@@ -58,7 +58,7 @@ h5,
 h6 {
 	color: #000;
 	font-family: "Work Sans", Arial, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	margin: 1.5em 0 1.5em 0;
 }
 
@@ -932,7 +932,7 @@ h6 {
 	text-transform: uppercase;
 }
 .fh5co-section-heading .fh5co-number {
-	color: rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.4);
 	padding-bottom: 2px;
 	margin-right: 10px;
 	display: -moz-inline-stack;
