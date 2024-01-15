@@ -207,7 +207,7 @@ h6 {
 }
 @keyframes unity-fill {
 	100% {
-		width: 75%;
+		width: 80%;
 	}
 }
 #unreal-blueprint-bar {
@@ -231,7 +231,7 @@ h6 {
 }
 @keyframes gamepr-fill {
 	100% {
-		width: 60%;
+		width: 70%;
 	}
 }
 #aipro-bar {
@@ -255,7 +255,15 @@ h6 {
 }
 @keyframes android-fill {
 	100% {
-		width: 50%;
+		width: 40%;
+	}
+}
+#flutter-bar {
+	animation: flutter-fill 2s forwards;
+}
+@keyframes flutter-fill {
+	100% {
+		width: 30%;
 	}
 }
 
@@ -780,9 +788,11 @@ h6 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+	align-items: center;
 }
 
 .img-container {
+	padding: 5px;
     text-align: center; /* Center the content within each container */
 }
 @media (max-width: 768px) {
