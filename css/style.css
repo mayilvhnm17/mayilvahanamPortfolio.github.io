@@ -242,6 +242,14 @@ h6 {
 		width: 20%;
 	}
 }
+#react-bar{
+	animation: react-fill 2s forwards;
+}
+@keyframes react-fill {
+	100% {
+		width: 50%;
+	}
+}
 #rn-bar {
 	animation: rn-fill 2s forwards;
 }
